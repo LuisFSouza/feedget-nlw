@@ -5,23 +5,24 @@ import { theme } from '../../theme';
 import { styles } from './styles';
 
 interface Props extends TouchableOpacityProps {
-    isLoading: boolean;
+  isLoading: boolean;
 }
 
-export function Button({isLoading}: Props) {
+export function Button({ isLoading, ...rest }: Props) {
   return (
-    <TouchableOpacity style={styles.container}>
-        {
-            isLoading 
-            ? 
-            <ActivityIndicator 
+    <TouchableOpacity style={styles.container}
+      {...rest}>
+      {
+        isLoading
+          ?
+          <ActivityIndicator
             color={theme.colors.text_on_brand_color}
-            /> 
-            : 
-            <Text style={styles.title}>
-                Enviar Feedback
-            </Text>
-        }
+          />
+          :
+          <Text style={styles.title}>
+            Enviar Feedback
+          </Text>
+      }
     </TouchableOpacity>
   );
 }

@@ -13,9 +13,9 @@ export const styles = StyleSheet.create({
     position: 'relative'
   },
   removeIcon: {
-      position: 'absolute',
-      bottom: 0,
-      right: 0
+    position: 'absolute',
+    bottom: 0,
+    right: 0
   },
 
   image: {

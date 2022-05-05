@@ -13,9 +13,9 @@ export const styles = StyleSheet.create({
         alignItems: 'center',
         position: 'absolute',
         right: 16,
-        bottom: getBottomSpace() +16
+        bottom: getBottomSpace() + 16
     },
-    modal:{
+    modal: {
         backgroundColor: theme.colors.surface_primary,
         paddingBottom: getBottomSpace() + 16
     },
