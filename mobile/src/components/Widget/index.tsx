@@ -7,6 +7,10 @@ import { gestureHandlerRootHOC } from 'react-native-gesture-handler';
 
 import { styles } from './styles';
 import { Options } from '../Options';
+import { Form } from '../Form';
+import {feedbackTypes } from '../../utils/feedbackTypes'
+
+export type FeedbackType = keyof typeof feedbackTypes
 
 function Widget() {
 
@@ -36,7 +40,8 @@ function Widget() {
                 backgroundStyle={styles.modal}
                 handleIndicatorStyle={styles.indicator}
             >
-                <Options />
+                <Form 
+                feedbackType='OTHER'/>
             </BottomSheet>
         </>
     );
